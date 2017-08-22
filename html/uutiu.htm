@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph.</p>
+<button onclick="myFunction1()">Try it</button>
+<button onclick="myFunction2()">Try it</button>
+<button onclick="myFunction3()">Try it</button>
+<p id="demo"></p>
+
+
+<ul id="one">
+<li>Trapti</li>
+<li>Neeraj</li>
+<li>Sumit</li>
+<li>Poonam</li>
+<li>Ankit</li>
+<li>Tarang</li>
+</ul>
+
+<script>
+function myFunction1() {
+var x = document.getElementById("one").innerHTML;
+document.getElementById("demo").innerHTML = x;
+}
+function myFunction2() {
+var z = document.getElementById("one");
+var y = z.getElementsByTagName("li");
+document.getElementById("demo").innerHTML = y[4].innerHTML;
+}
+
+function myFunction3() {
+var s = document.getElementsByTagName("li").item(3).innerHTML;
+    document.getElementById("demo").innerHTML = s;
+    }
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The first p element in the document.</p>
+<p>Another p element.</p>
+
+<p>Click the button to get the HTML content of the first p element (index 0) in this document.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<ul id="one">
+<li id="test">Ankit</li>
+<li id="test1">Neeraj</li>
+<li>Sumit</li>
+<li>Poonam</li>
+<li>Ankit</li>
+<li>Tarang</li>
+</ul>
+
+<script>
+    
+var z = document.getElementById("one");
+var y = z.getElementsByTagName("li");
+var k=y.length;
+window.alert(y[1].id);
+//window.alert(k);
+for (i=0;i<y.length;i++){
+var m= y[0].innerHTML;
+
+if (m=="Ankit")
+{
+window.alert(m);
+break;
+
+}
+/*else {window.alert("fail");
+window.alert("");
+break;}
+}
+*/
+//document.getElementById("demo").innerHTML = y[4].innerHTML;
+
+</script>
+
+</body>
+</html>
